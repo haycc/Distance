@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <title>Distance - Chatroom</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- jquery Files -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Bootstrap Files -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+        <!-- Other Files -->
+        <link rel="stylesheet" href="chatroom.css">
+
+    </head>
+    <body>
+        
+        <!-- Chatroom Elements -->
+        <div class="messaging">
+            <div class="inbox_msg">
+                <div class="inbox_people">
+                <div class="headind_srch">
+                    <div class="profile_heading">
+                        <input type="button" class="fadeIn fourth" value="Profile" id="profileBtn">
+                         
+                    </div>
+                </div>
+                <div class="inbox_chat scroll">
+                    <div class="chat_list active_chat">
+                    <div class="chat_people">
+                        <div class="chat_ib">
+                            <h5>Chat Room Project</h5>
+                            <p>Chat Room for everyone! 
+                                You can change your name, password and image in the profile section. Enjoy and be respectful!</p>
+                                  <a href="video.html" class="btn btn-info" role="button">Open  Video Chat</a>
+
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mesgs">
+                <div class="msg_history">
+                    <ul id="messages">
+
+                        <!-- Messages Go Here -->
+
+                    </ul>
+                </div>
+                <div class="type_msg">
+                    <div class="input_msg_write">
+                        <form id="messageForm">
+                            <input type="text" id="msgInput" class="write_msg" placeholder="Type a message"/ disabled>
+                            <button type="button" id="msgBtn" class="msg_send_btn" disabled>Send</button>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- FIREBASE CONNECTION -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#config-web-app -->
+        <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-storage.js"></script>
+
+        <script src="./js/firebase-config.js"></script>
+        <script src="./js/firebase.js"></script>
+        <script src="./js/firebase-ui.js"></script>
+        <script src="chatroom.js"></script>
+    
+    </body>
+</html>
