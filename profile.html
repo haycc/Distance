@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <title>Distance - Profile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- jquery Files -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Bootstrap Files -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+        <!-- Other Files -->
+        <link rel="stylesheet" href="pagestyle.css">
+          
+    </head>
+    <body>
+
+
+        <div class="wrapper fadeInDown container-fluid">
+            <div id="formContent">
+                <div id="formHeader">
+                    <h2>Distance Web App</h2>
+                </div>
+                <div class="profile-userpic">
+                    <img src="" id="profilePic" alt="">
+                    <h2>To change your profile picture: </h2>
+                    <input type="file" id="changepicBtn" onchange="previewFile()"><br>
+                </div>
+                <form>
+                    <h3 id=username></h3>
+                    <input type="button" class="fadeIn fourth" value="Options" id="optionsBtn" data-toggle="modal" data-target="#changeoptions">
+                    <input type="button" class="fadeIn fourth" value="Chat Room" id="chatroomBtn">
+                    <input type="button" class="fadeIn fourth" value="Log Out" id="logoutBtn">
+                </form>
+            </div>
+        </div>
+
+
+        <!-- Modal for changing username/password -->
+        <div class="modal fade" id="changeoptions" tabindex="-1" role="dialog" aria-labelledby="forgotpassword" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">Change Name or Password</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <h3 id=newnametext>New Name:</h3>
+                    <input type="text" id="nameChange" name="newname" placeholder="name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'name'">
+                    <input type="button" id="nameChangeBtn" value="Update Name">
+                    <h3 id=newpasstext>New Password:</h3>
+                    <input type="button" value="Change Password" id="changePassBtn">
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+        <!-- FIREBASE CONNECTION -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#config-web-app -->
+        <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-storage.js"></script>
+
+        <script src="./js/firebase-config.js"></script>
+        <script src="./js/firebase.js"></script>
+        <script src="./js/firebase-ui.js"></script>
+        <script src="profile.js"></script>
+
+    </body>
+</html>
